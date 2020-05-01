@@ -1,14 +1,19 @@
 import React from "react"
-import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
-
+import Layout from '../components/layout'
 // import '../css/blog-post.css';
+import SEO  from '../components/seo'
 
 export default function Template({ data }) {
   const { markdownRemark: post } = data
   return (
+    <Layout>
+      <div style={{ maxWidth: `800`, marginBottom: `1.45rem` }}>
     <div className="blog-post-container">
-      <Helmet title={`Your Blog Name - ${post.frontmatter.title}`} />
+    <SEO 
+      title={post.frontmatter.title}
+      description={post.frontmatter.excerpt}
+    />
       <div className="blog-post">
         <h1>{post.frontmatter.title}</h1>
         <div
@@ -17,6 +22,8 @@ export default function Template({ data }) {
         />
       </div>
     </div>
+    </div>
+    </Layout>
   )
 }
 

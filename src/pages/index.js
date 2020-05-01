@@ -1,6 +1,5 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import { Helmet } from "react-helmet"
 import Layout from "../components/layout"
 
 export default function Index({ data }) {
@@ -8,7 +7,7 @@ export default function Index({ data }) {
   return (
     
 <Layout>
-<div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+<div style={{ maxWidth: `500px`, marginBottom: `1.45rem` }}>
     <div className="blog-posts">
       {posts
         .filter(post => post.node.frontmatter.title.length > 0)
