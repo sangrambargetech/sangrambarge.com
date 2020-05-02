@@ -34,6 +34,7 @@ const Header = ({ siteTitle }) => (
        style={{textAlign: `right`}}
       >
         <Link to="/about">About</Link>
+        <Link to="/blog">Blog</Link>
       </nav>
 
     </div>

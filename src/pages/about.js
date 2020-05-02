@@ -9,7 +9,6 @@ const About = () => (
   <Layout>
     <p>
      Hi I am a Software Engineer with Interest in Javascript
-     In the Part time I like Hacking in React and Node.js
     </p>
     
     <SocialLinks>
