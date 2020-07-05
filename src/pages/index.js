@@ -1,25 +1,72 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+
+import Bio from "../components/bio"
 import Layout from "../components/layout"
-import { Helmet } from "react-helmet"
+import SEO from "../components/seo"
+import { rhythm } from "../utils/typography"
 
-const Index = () => (
- 
-<Layout>
-  <div style={{ maxWidth: `500px`, marginBottom: `1.45rem` }}>
-    <h1>{`Hi, I am Sangram 👋`} </h1>
+const BlogIndex = ({ data, location }) => {
+  const siteTitle = data.site.siteMetadata.title
+  const posts = data.allMarkdownRemark.edges
 
-    <p>
-              My name is Sangram Barge, I'm a software engineer & I Love
-              Frontend technologies, apart from my full time job I am also
-              working on my Independent Javascript projects.
-          
-            
-     </p>
-  </div>
-</Layout>
-)
+  return (
+    <Layout location={location} title={siteTitle}>
+      <SEO title="All posts" />
+      <Bio />
+      {posts.map(({ node }) => {
+        const title = node.frontmatter.title || node.fields.slug
+        return (
+          <article key={node.fields.slug}>
+            <header>
+              <h3
+                style={{
+                  marginBottom: rhythm(1 / 4),
+                }}
+              >
+                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                  {title}
+                </Link>
+              </h3>
+              <small>{node.frontmatter.date}</small>
+            </header>
+            <section>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: node.frontmatter.description || node.excerpt,
+                }}
+              />
+            </section>
+          </article>
+        )
+      })}
+    </Layout>
+  )
+}
 
+export default BlogIndex
 
-
-export default Index
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            description
+          }
+        }
+      }
+    }
+  }
+`
