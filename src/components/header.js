@@ -1,10 +1,22 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+import React, { useState } from "react"
 import  "./header.css"
 
 
-const Header = ({ siteTitle }) => (
+function Header({ siteTitle }){
+  const [isHover,setHover] = useState(false)
+  const isHoverHandler=()=>{
+    //setHover(true)
+    if(isHover){
+      setHover(false)
+    }else {
+      setHover(true)
+    }
+  } 
+
+return (
+  
   <header
     style={{
       marginBottom: `1.45rem`,
@@ -40,6 +52,7 @@ const Header = ({ siteTitle }) => (
     </div>
   </header>
 )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
