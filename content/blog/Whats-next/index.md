@@ -15,8 +15,9 @@ I love to spread motivation and that's why for 2020 I have decided to focus on s
 positivity in every little way I could.
 
 ### My Learning plans for 2020 
-AWS
-React JS
+ >AWS
+ 
+ >React JS
 
 Yes I have enrolled for AWS associate developer course and I am enjoying the course so far. I started this course a week back and so far 
 completed IAM and EC2 services, AWS is quite a fun than I thought. 
