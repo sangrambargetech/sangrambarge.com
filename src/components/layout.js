@@ -59,7 +59,7 @@ const Layout = ({ location, title, children }) => {
       <header>{header}</header>
       <main>{children}</main>
       <footer>
-        © {new Date().getFullYear()}, Made in India Made with ❤️
+        © {new Date().getFullYear()} Made with ❤️ in India.
         {` `}
         <a href="https://twitter.com/sangramtechs">Twitter</a>
       </footer>
