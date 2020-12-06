@@ -49,4 +49,6 @@ Additionally you can also integrate this functionality and expose it as an API s
     }
     })();
 
+![screenshot](s3_object.PNG)
+
 Do share it or Tweet it if you find this helpful.
