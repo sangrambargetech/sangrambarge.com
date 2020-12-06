@@ -16,7 +16,7 @@ OR
 
 > npm i aws-sdk.
 
-Since I use Node latest version I will use npm -i aws-sdk.
+Since I use Node latest version I will use npm i aws-sdk.
 
 We will need a **config.json** file to store our credential like secret key and access key or region.
 
