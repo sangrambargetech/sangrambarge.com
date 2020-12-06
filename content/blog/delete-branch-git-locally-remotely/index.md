@@ -18,4 +18,4 @@ In order to delete your remote branch in git you can use below command.
 
 After you execute the above command, you will no longer be able to find the branch present in remote repository.
 
-If this post helped us, make sure you tweet about it so it can be helpful for others.
+If this post helped you, make sure you tweet about it so it can be helpful for others.
