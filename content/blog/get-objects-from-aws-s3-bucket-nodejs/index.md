@@ -4,7 +4,7 @@ date: "2020-12-06T23:14:03.284Z"
 description: "How to Get Objects From AWS S3 Bucket using NodeJS"
 ---
 
-Recently I have been making calls to AWS serices using API, so one such thing I wanted to try was to get the objects from AWS bucket. I am not an AWS expert, I am just trying to see how to make this work. As we know AWS is not so great with Documentation and their API sucks, so after doing some research by searching on Stackoverflow and medium, I found a simple way to Get Objects from AWS bucket using Node js. So for achieving this task we will be using AWS SDK for Node JS.
+Recently I have been making calls to AWS services using API, so one such thing I wanted to try was to get the objects from AWS bucket. I am not an AWS expert, I am just trying to see how to make this work. As we know AWS is not so great with Documentation and their API sucks, so after doing some research by searching on Stackoverflow and medium, I found a simple way to Get Objects from AWS bucket using Node js. So for achieving this task we will be using AWS SDK for Node JS.
 
 ### Get Objects From AWS S3 Bucket with NodeJS
 
