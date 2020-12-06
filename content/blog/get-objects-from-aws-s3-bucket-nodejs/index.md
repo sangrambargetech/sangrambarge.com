@@ -18,11 +18,11 @@ OR
 
 Since I use Node latest version I will use npm i aws-sdk.
 
-We will need a **config.json** file to store our credential like secret key and access key or region.
+We will need a **config.json** file to store our credentials like secret key and access key or region.
 
-Source code can be found below. Since this is anonymous function to run this, you can type F5 in your VS code and select Node.js as your environment to execute this code for you.
+Source code can be found below. Since this is an anonymous function to run this, you can type F5 in your VS code and select Node.js as your environment to execute this code for you.
 
-Additionally you can also integrate this functionality and expose it as an API so for example if your frontend wants to access the resources they can make a GET request to the endpoint you define and you will get your Response.
+Additionally you can also integrate this functionality and expose it as an API so for example if your frontend wants to access the resources then you can make a GET request to the endpoint you defined and you will get the Response.
 
     const config = require("./config.json");
     const aws = require("aws-sdk");
