@@ -25,19 +25,19 @@ Source code can be found below. Since this is an anonymous function to run this,
 Additionally you can also integrate this functionality and expose it as an API so for example if your frontend wants to access the resources then you can make a GET request to the endpoint you defined and you will get the Response.
 
     const config = require("./config.json");
-    const aws = require("aws-sdk");
+    const AWS = require("aws-sdk");
 
     (async function () {
     try {
-    aws.config.setPromisesDependency();
-    aws.config.update({
-    accessKeyId: config.aws.accessKey,
-    secretAccessKey: config.aws.secretKey,
-    region: config.aws.region,
+    AWS.config.setPromisesDependency();
+    AWS.config.update({
+    accessKeyId: config.awsSecret.accessKey,
+    secretAccessKey: config.awsSecret.secretKey,
+    region: "ap-south-1",
     });
 
-    const s3 = new aws.S3();
-    const response = await s3
+    const s3object = new AWS.S3();
+    const response = await s3object
       .listObjectsV2({
         Bucket: "your aws bucket name",
       })
