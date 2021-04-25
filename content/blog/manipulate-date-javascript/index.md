@@ -1,7 +1,7 @@
 ---
 title: Manipulate Date Object in Javascript
 date: "2021-04-25T22:12:03.284Z"
-description: "Hello World"
+description: "Lets see how to manipulate date in javascript."
 ---
 
 
